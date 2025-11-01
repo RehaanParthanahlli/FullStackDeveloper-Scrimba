@@ -1,2 +1,18 @@
 Emoji's for Web-app.
 https://getemoji.com/
+
+External-
+
+Learn basics from this video-
+https://www.youtube.com/watch?v=G3e-cpL7ofc&t=68s
+
+Fonts and Boxes-
+https://fonts.google.com/selection/embed
+https://docs.google.com/drawings/d/17sDFRRjFL8zjF-C5SHjqcqqlcYqkyCNr_QeMvBbIOnI/edit
+
+https://supersimpledev.github.io/references/html-css-reference.pdf
+
+https://quickref.me/
+https://learn-anything.xyz/
+
+
