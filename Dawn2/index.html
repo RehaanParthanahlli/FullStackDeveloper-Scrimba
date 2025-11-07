@@ -10,6 +10,88 @@ Add a second image to our article. Find one via Google and place it
 under the <h1> element but over the <h3> element. Remember to use
 the width attribute to make the image as wide as the other elements.
 -->
+
+<h1>Welcome!</h1>
+<p>You have been granted access to the platform. 
+Please create an account.</p>
+<button>Sign up!</button>
+
+<h3>Supported Placeholder Inputs</h3>
+
+<label>Name:</label>
+<input type="text" placeholder="Enter your name"><br><br>
+
+<label>Email:</label>
+<input type="email" placeholder="you@example.com"><br><br>
+
+<label>Password:</label>
+<input type="password" placeholder="••••••"><br><br>
+
+<label>Search:</label>
+<input type="search" placeholder="Search here"><br><br>
+
+<label>Phone:</label>
+<input type="tel" placeholder="+91-9876543210"><br><br>
+
+<label>Website:</label>
+<input type="url" placeholder="https://example.com"><br><br>
+<form method="post" enctype="multipart/form-data" autocomplete="on" novalidate>
+    <!-- File Upload -->
+    <label for="upload">Upload Image:</label>
+    <input
+      type="file"
+      id="upload"
+      name="imageUpload"
+      accept="image/*"
+      multiple
+      required
+      title="Upload one or more image files"
+      tabindex="1"
+    >
+    <br><br>
+  
+    <!-- Date Picker -->
+    <label for="transmit-date">Transmission Date:</label>
+    <input
+      type="date"
+      id="transmit-date"
+      name="transmitDate"
+      min="2025-01-01"
+      max="2026-12-31"
+      required
+      title="Select a date between 2025 and 2026"
+      tabindex="2"
+    >
+    <br><br>
+  
+    <!-- Time Picker -->
+    <label for="transmit-time">Transmission Time:</label>
+    <input
+      type="time"
+      id="transmit-time"
+      name="transmitTime"
+      step="60"
+      required
+      title="Select a time in HH:MM format"
+      tabindex="3"
+    >
+    <br><br>
+  
+    <!-- Color Picker -->
+    <label for="photon-color">Photon Color:</label>
+    <input
+      type="color"
+      id="photon-color"
+      name="photonColor"
+      value="#00ffcc"
+      required
+      title="Choose a color to represent photon polarization"
+      tabindex="4"
+    >
+    <br><br>
+  
+    <button type="submit" tabindex="5">Submit</button>
+  </form>
 <!--
 Challenge:
 Create the signup layout from the provided design.
@@ -19,7 +101,17 @@ You have been granted access to the platform.
 Please create an account.
 Sign up!
 -->
-<h1>Welcome!</h1>
-<p>You have been granted access to the platform. 
-Please create an account.</p>
-<button>Sign up!</button>
+<!-- IGNORE THIS LINE 👇 -->
+<link rel="stylesheet" href="styles.css">
+
+
+
+<img src="google.png">
+<input type="text">
+<button>Google Search</button>
+<button>I'm Feeling Lucky</button>
+<!--
+Challenge:
+Write the four HTML tags you need to create a Google.com clone.
+Hint: one image, one input field, and two buttons.
+-->
