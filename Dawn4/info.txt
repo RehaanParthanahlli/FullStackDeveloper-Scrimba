@@ -2,3 +2,6 @@ Watched Video of HTML BroCode
 Duration: 1 Hour
 Link: https://www.youtube.com/watch?v=HD13eq_Pmp8&t=554s
 Started PORT-FOLIO!
+
+Complete the HTML part of Scrimba FSD later watch this 1 hour video to master HTML!
+Also start learning some emmet cheat sheet codes

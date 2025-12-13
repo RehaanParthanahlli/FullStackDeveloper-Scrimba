@@ -1,1 +1,2 @@
 Intro to CSS
+Notes are enough no need of code
