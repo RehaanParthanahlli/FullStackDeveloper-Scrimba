@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        p{
+            margin:0px;
+        }
+    </style>
+</head>
+<body style="padding-bottom: 1000px;">
+    <div style="display: flex;
+                flex-direction: row;">
+        <div style="background-color: aqua;margin-right:4px;padding:4px;width:200px;">
+            <p>Just created a flex with dir row</p>
+            <p>Used for same alignment as grid & its flexible</p>
+        </div>
+        <div style="background-color: rgb(171, 127, 211);padding:4px;flex:1;">
+            <p>flex 1 is same as 1 fr in grid</p>
+            <p>Remember grid col behaves like block but here these behave like inline ie in grid even if width is less others element cant tke up the rest up space.</p>
+        </div>
+        <div style="background-color: rgb(127, 211, 152);padding:4px;flex:2;">
+            <p>flex 2 is same as 2 fr in grid</p>
+        </div>
+    </div>
+    <div style="margin-top:20px;
+                align-items: stretch;
+                display: flex;
+                justify-content: end;
+                flex-direction: row;
+                border-width: 2px;
+                border-style: groove;                      
+                border-color: aquamarine;"><!--Or just use border:2px groove aquamarine or border-botton:dotted;-->
+        <div style="background-color: aqua;margin-right:4px;padding:4px;width:200px;height:200px;">
+
+        </div>
+        <div style="background-color: rgb(171, 127, 211);padding:4px;width:20px;">
+
+        </div>
+        <div style="background-color: rgb(127, 211, 152);padding:4px;width:20px;">
+
+        </div>
+    </div>
+    <div style="display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                height:100px;
+                margin-top:20px;
+                border-width: 2px;
+                border-style: solid;                      
+                border-color: aquamarine;">   <!--Or just use border:2px groove aquamarine or border-botton:dotted;-->
+        <div style="background-color: aqua;margin-right:4px;width:200px;">
+            <p>Using align-items in flex</p>
+        </div>
+        <div style="background-color: rgb(171, 127, 211);width:200px;">
+            <p>the thing is align item stretch is default value but can use end start or cnter</p>
+        </div>
+        <div style="background-color: rgb(127, 211, 152);width:200px;">
+            <p>Dont use padding here</p>
+        </div>
+    </div>
+</body>
+</html>
+<!--Even if I rearrange the divs then just laout chngs nthng else-->
+<!--When do we require a flexbox
+    Suppose u have a nav section before login its just have 2 icons after login it as 4 icons then we require flexible flexbox-->
