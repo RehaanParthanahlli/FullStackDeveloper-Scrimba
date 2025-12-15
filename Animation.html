@@ -1,0 +1,279 @@
+<!DOCTYPE html><!-- Transform @QFrm Animation -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transform + Animation Demo</title>
+
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #111;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background: dodgerblue;
+
+      /* animation property */
+      animation: demo 3s ease-in-out infinite;
+    }  /*animation var name can demo or demo1 or wish */
+
+    /* animation definition */
+    @keyframes demo {
+      0% {
+        transform: translateX(0) rotate(0deg) scale(1);      /* from {}
+                                                                  to {} */
+      }
+
+      50% {
+        transform: translateX(150px) rotate(180deg) scale(1.5);
+      }
+
+      100% {
+        transform: translateX(0) rotate(360deg) scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+</html>
+
+transform — what it really is
+transform visually changes an element without changing layout.
+
+The browser does not recalculate surrounding elements.
+That’s why it’s fast and preferred for motion.
+
+What transform can do
+1. translate() — move
+transform: translate(50px, 20px);
+
+
+Moves element without affecting others.
+
+Variants:
+
+translateX()
+
+translateY()
+
+2. scale() — resize
+transform: scale(1.5);
+
+
+Scales from the center by default.
+
+3. rotate() — rotate
+transform: rotate(45deg);
+
+
+Rotates clockwise.
+
+4. skew() — tilt
+transform: skew(10deg, 5deg);
+
+
+Tilts element.
+
+Multiple transforms (IMPORTANT)
+transform: translateX(100px) rotate(90deg) scale(1.2);
+
+
+Order matters.
+Left → right execution.
+
+
+
+
+
+CSS ANIMATION — FULL PICTURE
+What animation is
+
+CSS animation = automatic change of CSS properties over time.
+
+It does not need user interaction (unlike transition).
+
+Animation exists because of two things only:
+
+@keyframes
+
+animation property
+
+Nothing else is mandatory.
+
+1. @keyframes — THE SCRIPT
+
+Defines what changes over time.
+
+Syntax:
+
+@keyframes name {
+  0%   { property: value; }
+  50%  { property: value; }
+  100% { property: value; }
+}
+
+
+Rules:
+
+Name is user-defined
+
+% = timeline
+
+from = 0%
+
+to = 100%
+
+You can define any number of steps
+
+You can animate:
+
+transform
+
+opacity
+
+color
+
+background-color
+
+width / height
+
+filter
+
+etc.
+
+You cannot animate:
+
+display
+
+position
+
+float
+
+2. animation — THE PLAYER
+
+This applies the animation to an element.
+
+Shorthand:
+
+animation: name duration timing delay iteration direction fill playstate;
+
+
+Example:
+
+animation: spin 2s ease 0s infinite normal forwards running;
+
+3. Every animation property (EXACTLY)
+animation-name
+animation-name: spin;
+
+
+Which @keyframes to run.
+
+animation-duration
+animation-duration: 2s;
+
+
+How long one cycle takes.
+
+animation-timing-function
+animation-timing-function: ease | linear | ease-in | ease-out | cubic-bezier();
+
+
+Controls speed curve.
+
+linear → constant speed
+
+ease → default
+
+cubic-bezier() → custom physics
+
+animation-delay
+animation-delay: 1s;
+
+
+Wait before starting.
+
+Can be negative → animation starts midway.
+
+animation-iteration-count
+animation-iteration-count: infinite | 1 | 5;
+
+
+How many times it runs.
+
+animation-direction
+animation-direction: normal | reverse | alternate | alternate-reverse;
+
+
+alternate → forward, then backward
+
+Prevents snapping back
+
+animation-fill-mode
+animation-fill-mode: none | forwards | backwards | both;
+
+
+Controls what state stays visible.
+
+forwards → keep last frame
+
+backwards → apply first frame during delay
+
+both → both rules
+
+This is where most beginners fail.
+
+animation-play-state
+animation-play-state: running | paused;
+
+
+Used to pause/play animations via hover or JS.
+
+4. Multiple animations (advanced)
+animation:
+  spin 2s linear infinite,
+  fade 1s ease forwards;
+
+
+Yes — multiple animations on one element.
+
+5. Animation vs Transition (FINAL)
+Feature	Transition	Animation
+Needs trigger	YES	NO
+Runs automatically	NO	YES
+Multiple steps	NO	YES
+Loop	NO	YES
+6. Performance truth (important)
+
+Best properties to animate:
+
+transform
+
+opacity
+
+Avoid animating:
+
+top, left
+
+width, height (heavy)
+
+margin (layout reflow)
+
+7. Mental model (lock this forever)
+
+@keyframes → timeline
+
+animation → engine
+
+transform / opacity → fuel
+
+Animation does not depend on transform.
+Transform is just the cleanest fuel.
